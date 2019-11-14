@@ -42,15 +42,26 @@ extension Reactive where Base: UIPresentationController {
         return UIAdaptivePresentationControllerDelegateProxy.proxy(for: base)
     }
     
-    public var presentationControllerDidDismiss: Observable<Void> {
-        if #available(iOS 13.0, *) {
-            let source = rx_delegate.methodInvoked(#selector(UIAdaptivePresentationControllerDelegate.presentationControllerDidDismiss(_:))).map { result -> Void in
-                return result[1] as! Void
-            }
-            return source
-        } else {
-            // Fallback on earlier versions
-            return ControlEvent<Void>.empty()
+    /// Called on the delegate when the user has taken action to dismiss the presentation, before interaction or animations begin.
+    /// 
+    /// Use this callback to setup alongside animations or interaction notifications with the presentingViewController's transitionCoordinator.
+    /// This is not called if the presentation is dismissed programatically.
+    @available(iOS 13.0, *)
+    public var willDismiss: Observable<Void> {
+        let source = rx_delegate.methodInvoked(#selector(UIAdaptivePresentationControllerDelegate.presentationControllerWillDismiss(_:))).map { result -> Void in
+            return result[1] as! Void
         }
+        return source
+    }
+    
+    /// Called on the delegate when the user has taken action to dismiss the presentation successfully, after all animations are finished.
+    ///
+    /// This is not called if the presentation is dismissed programatically.
+    @available(iOS 13.0, *)
+    public var didDismiss: Observable<Void> {
+        let source = rx_delegate.methodInvoked(#selector(UIAdaptivePresentationControllerDelegate.presentationControllerDidDismiss(_:))).map { result -> Void in
+            return result[1] as! Void
+        }
+        return source
     }
 }
