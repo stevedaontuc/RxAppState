@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import UIKit
 
-class UIAdaptivePresentationControllerDelegateProxy: DelegateProxy<UIPresentationController, UIAdaptivePresentationControllerDelegate>, UIAdaptivePresentationControllerDelegate, DelegateProxyType {
+public class UIAdaptivePresentationControllerDelegateProxy: DelegateProxy<UIPresentationController, UIAdaptivePresentationControllerDelegate>, UIAdaptivePresentationControllerDelegate, DelegateProxyType {
     
     public weak var viewController: UIPresentationController?
     
@@ -20,15 +20,15 @@ class UIAdaptivePresentationControllerDelegateProxy: DelegateProxy<UIPresentatio
         super.init(parentObject: viewController, delegateProxy: UIAdaptivePresentationControllerDelegateProxy.self)
     }
     
-    static func currentDelegate(for object: UIPresentationController) -> UIAdaptivePresentationControllerDelegate? {
+    public static func currentDelegate(for object: UIPresentationController) -> UIAdaptivePresentationControllerDelegate? {
         return object.delegate
     }
     
-    static func setCurrentDelegate(_ delegate: UIAdaptivePresentationControllerDelegate?, to object: UIPresentationController) {
+    public static func setCurrentDelegate(_ delegate: UIAdaptivePresentationControllerDelegate?, to object: UIPresentationController) {
         object.delegate = delegate
     }
     
-    static func registerKnownImplementations() {
+    public static func registerKnownImplementations() {
         self.register { UIAdaptivePresentationControllerDelegateProxy(viewController: $0) }
     }
 }
