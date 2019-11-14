@@ -10,9 +10,9 @@
 		082D76BF1EFBC24400A4E97B /* RxAppState.h in Headers */ = {isa = PBXBuildFile; fileRef = 082D76BD1EFBC24400A4E97B /* RxAppState.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		082D76C81EFBC28A00A4E97B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 082D76C61EFBC28A00A4E97B /* RxCocoa.framework */; };
 		082D76C91EFBC28A00A4E97B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 082D76C71EFBC28A00A4E97B /* RxSwift.framework */; };
-		082D76CE1EFBC2BE00A4E97B /* RxApplicationDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D76CC1EFBC2BE00A4E97B /* RxApplicationDelegateProxy.swift */; };
 		082D76CF1EFBC2BE00A4E97B /* UIApplication+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D76CD1EFBC2BE00A4E97B /* UIApplication+Rx.swift */; };
 		A46E5C61231D7158002DD06E /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46E5C60231D7158002DD06E /* UIViewController+Rx.swift */; };
+		DCF56E02237CFA7500648139 /* UIAdaptivePresentationControllerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF56E01237CFA7500648139 /* UIAdaptivePresentationControllerDelegateProxy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +21,9 @@
 		082D76BE1EFBC24400A4E97B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		082D76C61EFBC28A00A4E97B /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		082D76C71EFBC28A00A4E97B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		082D76CC1EFBC2BE00A4E97B /* RxApplicationDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxApplicationDelegateProxy.swift; path = Pod/Classes/RxApplicationDelegateProxy.swift; sourceTree = SOURCE_ROOT; };
 		082D76CD1EFBC2BE00A4E97B /* UIApplication+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIApplication+Rx.swift"; path = "Pod/Classes/UIApplication+Rx.swift"; sourceTree = SOURCE_ROOT; };
 		A46E5C60231D7158002DD06E /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Rx.swift"; path = "Pod/Classes/UIViewController+Rx.swift"; sourceTree = SOURCE_ROOT; };
+		DCF56E01237CFA7500648139 /* UIAdaptivePresentationControllerDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAdaptivePresentationControllerDelegateProxy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 		082D76BC1EFBC24400A4E97B /* RxAppState */ = {
 			isa = PBXGroup;
 			children = (
-				082D76CC1EFBC2BE00A4E97B /* RxApplicationDelegateProxy.swift */,
+				DCF56E01237CFA7500648139 /* UIAdaptivePresentationControllerDelegateProxy.swift */,
 				082D76CD1EFBC2BE00A4E97B /* UIApplication+Rx.swift */,
 				A46E5C60231D7158002DD06E /* UIViewController+Rx.swift */,
 				082D76BD1EFBC24400A4E97B /* RxAppState.h */,
@@ -160,7 +160,7 @@
 			files = (
 				082D76CF1EFBC2BE00A4E97B /* UIApplication+Rx.swift in Sources */,
 				A46E5C61231D7158002DD06E /* UIViewController+Rx.swift in Sources */,
-				082D76CE1EFBC2BE00A4E97B /* RxApplicationDelegateProxy.swift in Sources */,
+				DCF56E02237CFA7500648139 /* UIAdaptivePresentationControllerDelegateProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
