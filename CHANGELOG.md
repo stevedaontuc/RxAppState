@@ -1,5 +1,9 @@
 Changelog
 =========
+1.6.1
+-----
+- added **UIAdaptivePresentationControllerDelegateProxy** to work with **UIAdaptivePresentationControllerDelegate** on iOS 13.
+
 1.6.0
 -----
 - uses notifications to create the AppState observables. 
